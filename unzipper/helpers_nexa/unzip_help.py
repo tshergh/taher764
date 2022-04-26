@@ -75,7 +75,7 @@ def check_logs():
                 print("؟ الدردشة ليست خاصة")
                 return
             else:
-                client.send_message(chat_id=Config.LOGS_CHANNEL, text="`بدا البوت باستخراج بنجاح! \n\n 𝐓𝐇𝐄 𝐁𝐎𝐓 𝐇𝐀𝐒 𝐒𝐔𝐂𝐂𝐄𝐒𝐒𝐅𝐔𝐋𝐋𝐘 𝐄𝐗𝐓𝐑𝐀𝐂𝐓𝐄𝐃!` \n\n**Powered by ❤ @engineering_electrical9**")
+                client.send_message(chat_id=Config.LOGS_CHANNEL, text="`بدا البوت باستخراج بنجاح!` \n\n**Powered by ❤ @engineering_electrical9**")
         else:
             print("لم يتم إعطاء معرف قناة السجل! إيما سترحل الآن!")
             exit()
