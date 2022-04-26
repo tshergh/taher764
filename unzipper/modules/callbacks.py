@@ -98,7 +98,7 @@ async def unzipper_cb(unzip_bot: Client, query: CallbackQuery):
                     )
                 e_time = time()
             else:
-                await answer_query(query, "لا يمكن العثور على التفاصيل! يرجى الاتصال بمجموعة الدعم!(Details can not be found! Please contact the support group!)", answer_only=True, unzip_client=unzip_bot)
+                await answer_query(query, "لا يمكن العثور على التفاصيل! يرجى الاتصال بمجموعة الدعم!\n\n Details can not be found! Please contact the support group!", answer_only=True, unzip_client=unzip_bot)
             
             await answer_query(query, Messages.AFTER_OK_DL_TXT.format(TimeFormatter(round(e_time-s_time) * 1000)), unzip_client=unzip_bot)
 
@@ -128,9 +128,9 @@ async def unzipper_cb(unzip_bot: Client, query: CallbackQuery):
             paths = await get_files(path=ext_files_dir)
             i_e_buttons = await make_keyboard(paths=paths, user_id=user_id, chat_id=query.message.chat.id)
             try:
-                await query.message.edit("`حدد الملفات المراد تحميلها!(Select the files to upload!)`", reply_markup=i_e_buttons)
+                await query.message.edit("`حدد الملفات المراد تحميلها!\n\n Select the files to upload! `", reply_markup=i_e_buttons)
             except:
-                await unzip_bot.send_message(chat_id=query.message.chat.id, text="`حدد الملفات المراد تحميلها!(Select the files to upload!)`", reply_markup=i_e_buttons)
+                await unzip_bot.send_message(chat_id=query.message.chat.id, text="`حدد الملفات المراد تحميلها!\n\n Select the files to upload! `", reply_markup=i_e_buttons)
                 await query.message.delete()
             
         except Exception as e:
@@ -149,9 +149,9 @@ async def unzipper_cb(unzip_bot: Client, query: CallbackQuery):
         if not paths:
             if os.path.isdir(f"{Config.DOWNLOAD_LOCATION}/{spl_data[1]}"):
                 shutil.rmtree(f"{Config.DOWNLOAD_LOCATION}/{spl_data[1]}")
-            return await query.message.edit("`لقد أرسلت لك بالفعل هذه الملفات 😐 ، لا تطلب مني إعادة الإرسال!(I've already sent you these files 😐, don't ask me to resend!)`")
+            return await query.message.edit("`لقد أرسلت لك بالفعل هذه الملفات 😐 ، لا تطلب مني إعادة الإرسال!\n\nI've already sent you these files 😐, don't ask me to resend!`")
         
-        await query.answer("إرسال هذا الملف لك. أرجو الإنتظار!(Send this file to you. please wait!)")
+        await query.answer("إرسال هذا الملف لك. أرجو الإنتظار! \n\n Send this file to you. please wait!")
         await send_file(unzip_bot=unzip_bot,
                         c_id=spl_data[2],
                         doc_f=paths[int(spl_data[3])],
@@ -160,7 +160,7 @@ async def unzipper_cb(unzip_bot: Client, query: CallbackQuery):
                     )
 
         # Refreshing Inline keyboard
-        await query.message.edit("`تحديث ⏳ ...`")
+        await query.message.edit("`تحديث ⏳ Update ...`")
         rpaths = await get_files(path=file_path)
         # There are no files let's die
         if not rpaths:
@@ -168,9 +168,9 @@ async def unzipper_cb(unzip_bot: Client, query: CallbackQuery):
                 shutil.rmtree(f"{Config.DOWNLOAD_LOCATION}/{spl_data[1]}")
             except:
                 pass
-            return await query.message.edit("`إرسال هذا الملف لك. أرجو الإنتظار!(Send this file to you. please wait!)`")
+            return await query.message.edit("`إرسال هذا الملف لك. أرجو الإنتظار!\n\n Send this file to you. please wait! `")
         i_e_buttons = await make_keyboard(paths=rpaths, user_id=query.from_user.id, chat_id=query.message.chat.id)
-        await query.message.edit("حدد الملفات المراد تحميلها!", reply_markup=i_e_buttons)
+        await query.message.edit("حدد الملفات المراد تحميلها!\n\n Select the files to download!", reply_markup=i_e_buttons)
     
     
     elif query.data.startswith("ext_a"):
@@ -182,8 +182,8 @@ async def unzipper_cb(unzip_bot: Client, query: CallbackQuery):
                 shutil.rmtree(f"{Config.DOWNLOAD_LOCATION}/{spl_data[1]}")
             except:
                 pass
-            return await query.message.edit("`إرسال هذا الملف لك. أرجو الإنتظار!(Send this file to you. please wait!)`")
-        await query.answer("أحاول إرسال جميع الملفات إليك. أرجو الإنتظار!(I am trying to send all the files to you. please wait!)")
+            return await query.message.edit("`إرسال هذا الملف لك. أرجو الإنتظار!\n\n Send this file to you. please wait! `")
+        await query.answer("أحاول إرسال جميع الملفات إليك. أرجو الإنتظار!\n\n I am trying to send all the files to you. please wait! ")
         for file in paths:
             await send_file(unzip_bot=unzip_bot,
                             c_id=spl_data[2],
@@ -202,7 +202,7 @@ async def unzipper_cb(unzip_bot: Client, query: CallbackQuery):
             shutil.rmtree(f"{Config.DOWNLOAD_LOCATION}/{query.from_user.id}")
             await query.message.edit(Messages.CANCELLED_TXT.format("(Operation canceled)تم إلغاء العملية"))
         except:
-            return await query.answer("لا يوجد شيء لإزالة(There is nothing to remove ) 🥴", show_alert=True)
+            return await query.answer("لا يوجد شيء لإزالة \n\n There is nothing to remove  🥴", show_alert=True)
     
     elif query.data == "nobully":
-        await query.message.edit("**حسنا حسنا! لن أحذف هذه الملفات 😂☻!(Well Well! I will not delete these files 😂☻!)**")
+        await query.message.edit("**حسنا حسنا! لن أحذف هذه الملفات 😂☻!\n\n Well Well! I will not delete these files 😂☻!**")
