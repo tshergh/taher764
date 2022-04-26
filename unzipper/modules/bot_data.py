@@ -53,10 +53,10 @@ class Buttons:
 
     SET_UPLOAD_MODE_BUTTONS = InlineKeyboardMarkup([
             [
-                InlineKeyboardButton("كما دوك 📁", callback_data="set_mode|doc")
+                InlineKeyboardButton("كمستند (doc)", callback_data="set_mode|doc")
             ],
             [
-                InlineKeyboardButton("كفيديو 📹", callback_data="set_mode|video")
+                InlineKeyboardButton("كفيديو (video) 📹 ", callback_data="set_mode|video")
             ]
         ])
 
@@ -88,7 +88,7 @@ class Messages:
     """
 
     ABOUT_TXT = """
-**About Nexa Unzipper Bot,**
+**حول بوت فك الضغط**
 
 ✘ **قناة البوت:** [channal dev taher](https://t.me/engineering_electrical9)
 ✘ **موقع بوت:** [website dev taher](https://electrical-engineer-cc40b.web.app/)
