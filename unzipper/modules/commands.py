@@ -53,17 +53,17 @@ async def clean_ma_files(_, message: Message):
 
 @Client.on_message(filters.incoming & filters.private & filters.regex(https_url_regex) | filters.document)
 async def extract_dis_archive(_, message: Message):
-    unzip_msg = await message.reply("`جارٍ المعالجة ⚙️(Processing) ...`", reply_to_message_id=message.message_id)
+    unzip_msg = await message.reply("`جارٍ المعالجة ⚙️ ...`", reply_to_message_id=message.message_id)
     user_id = message.from_user.id
     download_path = f"{Config.DOWNLOAD_LOCATION}/{user_id}"
     if os.path.isdir(download_path):
-        return await unzip_msg.edit("`هناك بالفعل عملية واحدة جارية ، لا ترسل بريدًا عشوائيًا أيها الأحمق 😑🌝!\n\n There is already one process running, don't spam you idiot 😑🌝!` \n\nهل تريد مسح الملفات من الخادم الخاص بي؟ ثم أرسل فقط \n\n Do you want to erase files from my server? Then just send**/clean** أمر!")
+        return await unzip_msg.edit("`هناك بالفعل عملية واحدة جارية ، لا ترسل بريدًا عشوائيًا أيها الأحمق 😑🌝!` \n\nهل تريد مسح الملفات من الخادم الخاص بي؟ ثم أرسل فقط **/clean** أمر!")
     if message.text and (re.match(https_url_regex, message.text)):
-        await unzip_msg.edit("**(what do you want?)ماذا تريد؟**", reply_markup=Buttons.CHOOSE_E_U__BTNS)
+        await unzip_msg.edit("**ماذا تريد؟**", reply_markup=Buttons.CHOOSE_E_U__BTNS)
     elif message.document:
-        await unzip_msg.edit("**(what do you want?)ماذا تريد؟**", reply_markup=Buttons.CHOOSE_E_F__BTNS)
+        await unzip_msg.edit("**ماذا تريد؟**", reply_markup=Buttons.CHOOSE_E_F__BTNS)
     else:
-        await unzip_msg.edit("`أصمد! ما الذي يجب علي استخراجه 🙄😳؟\n\n hold up! What should I extract  🙄😳?`")
+        await unzip_msg.edit("`أصمد! ما الذي يجب علي استخراجه 🙄😳؟`")
 
 
 # Database Commands
@@ -75,7 +75,7 @@ async def set_up_mode_for_user(_, message: Message):
 
 @Client.on_message(filters.private & filters.command("stats") & filters.user(Config.BOT_OWNER))
 async def send_stats(_, message: Message):
-    stats_msg = await message.reply("`جارٍ المعالجة ⚙️(Processing) ...`")
+    stats_msg = await message.reply("`جارٍ المعالجة ⚙️ ...`")
     total, used, free = shutil.disk_usage(".")
     total = humanbytes(total)
     used = humanbytes(used)
@@ -156,7 +156,7 @@ async def ban_user(_, message: Message):
 
 @Client.on_message(filters.private & filters.command("unban") & filters.user(Config.BOT_OWNER))
 async def unban_user(_, message: Message):
-    unban_msg = await message.reply("`جارٍ المعالجة ⚙️(Processing) ...`")
+    unban_msg = await message.reply("`جارٍ المعالجة ⚙️ ...`")
     try:
         user_id = message.text.split(None, 1)[1]
     except:
