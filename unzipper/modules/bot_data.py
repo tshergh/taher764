@@ -7,20 +7,20 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 class Buttons:
     START_BUTTON = InlineKeyboardMarkup([
             [
-                InlineKeyboardButton("مساعدة 📜", callback_data="helpcallback"),
-                InlineKeyboardButton("حول ⁉️", callback_data="aboutcallback")
+                InlineKeyboardButton("مساعدة (help)📜", callback_data="helpcallback"),
+                InlineKeyboardButton("حول (about)⁉️", callback_data="aboutcallback")
             ]
         ])
     
     CHOOSE_E_F__BTNS = InlineKeyboardMarkup([
             [
-                InlineKeyboardButton("استخراج الملف 📂", callback_data="extract_file|tg_file|no_pass"),
+                InlineKeyboardButton("استخراج الملف (extract file)📂", callback_data="extract_file|tg_file|no_pass"),
             ],
             [
-                InlineKeyboardButton("ملف (كلمة المرور) استخراج 📂", callback_data="extract_file|tg_file|with_pass")
+                InlineKeyboardButton("ملف (كلمة المرورpassword) استخراج 📂", callback_data="extract_file|tg_file|with_pass")
             ],
             [
-                InlineKeyboardButton("إلغاء ❌", callback_data="cancel_dis")
+                InlineKeyboardButton("إلغاء (cancel)❌", callback_data="cancel_dis")
             ]
         ])
 
@@ -32,22 +32,22 @@ class Buttons:
                 InlineKeyboardButton("🔗 (كلمة المرور) استخراج عنوان URL 📂", callback_data="extract_file|url|with_pass")
             ],
             [
-                InlineKeyboardButton("إلغاء ❌", callback_data="cancel_dis")
+                InlineKeyboardButton("إلغاء (cancel)❌", callback_data="cancel_dis")
             ]
         ])
 
     CLN_BTNS = InlineKeyboardMarkup([
             [
-                InlineKeyboardButton("تنظيف ملفاتي 😇", callback_data="cancel_dis")
+                InlineKeyboardButton("تنظيف ملفاتي (clean files)😇", callback_data="cancel_dis")
             ],
             [
-                InlineKeyboardButton("لا تنظف", callback_data="nobully")
+                InlineKeyboardButton("لا تنظف no clean", callback_data="nobully")
             ]
         ])
     
     ME_GOIN_HOME = InlineKeyboardMarkup([
             [
-                InlineKeyboardButton("رجوع 🏡", callback_data="megoinhome")
+                InlineKeyboardButton("رجوع (Back)🏡", callback_data="megoinhome")
             ]
         ])
 
@@ -65,9 +65,10 @@ class Messages:
     START_TEXT = """
  🗂مرحبًا {} ، أنا بوت فك ضغط عن ملفات 😇!
 `يمكنني استخراج أرشيفات مثل zip و rar و tar إلخ.`
-
+𝐇𝐈 {}, 𝐈 𝐁𝐎𝐓 𝐃𝐄𝐂𝐎𝐌𝐏𝐑𝐄𝐒𝐒 𝐅𝐈𝐋𝐄𝐒 😇
+`𝙸 𝙲𝙰𝙽 𝙴𝚇𝚃𝚁𝙰𝙲𝚃 𝙰𝚁𝙲𝙷𝙸𝚅𝙴𝚂 𝙻𝙸𝙺𝙴 𝚉𝙸𝙿, 𝚁𝙰𝚁, 𝚃𝙰𝚁 𝙴𝚃𝙲.`
 **Made with ❤️ by Dev&Eng: @ta_ja199 👨🏻‍💻**
-[⭐️ تقييم البوت ⭐️](https://t.me/tlgrmcbot?start=unzipunrarprobot-review)
+[⭐️ تقييم البوت (Rate bot)⭐️](https://t.me/tlgrmcbot?start=unzipunrarprobot-review)
     """
 
     HELP_TXT = """
@@ -85,10 +86,22 @@ class Messages:
     **2.** `من فضلك لا ترسل ملفات تالفة! إذا قمت بإرسال واحد عن طريق الخطأ فقط أرسل أمر ` **/clean** 
     
     **3.** `إذا كان الأرشيف الخاص بك يحتوي على 95 ملفًا أو أكثر ، فلن يتمكن برنامج الروبوت من إظهار جميع الملفات المستخرجة للاختيار من بينها. لذلك في هذه الحالة ، إذا لم تتمكن من رؤية ملفك في الأزرار ، فما عليك سوى النقر فوق` "تحميل الكل ♻️" `زر. سيرسل لك جميع الملفات المستخرجة!`
-    """
+
+**How To Extract? 🤔**
+`1. Send the file or link that you want to extract.`
+`2. Click on extract button (If you sent a link use "Url Extract" button. If it's a file just use "File Extract" button).`
+**How To Change Upload Mode? 🤔**
+ `Send` **/mode** `command to the bot. You can change upload mode from there.`
+**Note:**
+    **1.** `If your archive is password protected select` **(Password) Extract 📂** `mode. Bot isn't a GOD to know your file's password so If this happens just send that password!`
+    
+    **2.** `Please don't send corrupted files! If you sent a one by a mistake just send` **/clean** `command!`
+    
+    **3.** `If your archive have 95 or more files in it then bot can't show all of extracted files to select from. So in that case if you can't see your file in the buttons just click on` "Upload All ♻️" `button. It'll send all extracted files to you!`  
+ """
 
     ABOUT_TXT = """
-**حول بوت فك الضغط**
+**حول بوت فك الضغط(About the decompression bot)**
 
 ✘ **قناة البوت:** [channal dev taher](https://t.me/engineering_electrical9)
 ✘ **موقع بوت:** [website dev taher](https://electrical-engineer-cc40b.web.app/)
@@ -109,6 +122,7 @@ class Messages:
 
     AFTER_OK_DL_TXT = """
 **تم التنزيل بنجاح**
+**𝓓𝓞𝓦𝓝𝓛𝓞𝓐𝓓𝓔𝓓 𝓢𝓤𝓒𝓒𝓔𝓢𝓢𝓕𝓤𝓛𝓛𝓨**
 
 **Download time(وقت التحميل):** `{}`
 **Status(الحالة):** `محاولة استخراج الأرشيف`
@@ -116,6 +130,7 @@ class Messages:
 
     EXT_OK_TXT = """
 **تم الاستخراج بنجاح!**
+**𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝙵𝚄𝙻𝙻𝚈 𝙴𝚇𝚃𝚁𝙰𝙲𝚃𝙴𝙳!**
 
 **Extraction time(وقت الاستخراج:):** `{}`
 **الحالة:** `في محاولة لتحميل`
@@ -123,13 +138,20 @@ class Messages:
 
     EXT_FAILED_TXT = """
 **فشل الاستخراج 😕!**
+**EXTRACTION FAILED 😕!**
 
 **ما يجب القيام به؟**
 
  - `يرجى التأكد من عدم تلف الأرشيف`
  - `يرجى التأكد من تحديد الوضع الصحيح!`
  - `قد يكون تنسيق الأرشيف الخاص بك غير مدعوم 😔`
+ 
+**what should be done?**
 
+  - `Please make sure the archive is not damaged`
+  - `Please make sure you select the correct mode!`
+  - `Your archive format may not be supported 😔`
+  
 **report: @ta_ja199 **
     """
 
@@ -146,16 +168,21 @@ class Messages:
 **{} ✅!**
 
 `الآن تم حذف جميع ملفاتك من خادمي 😏!`
-    """
+`𝑁𝑂𝑊 𝐴𝐿𝐿 𝑌𝑂𝑈𝑅 𝐹𝐼𝐿𝐸𝑆 𝐻𝐴𝑉𝐸 𝐵𝐸𝐸𝑁 𝐷𝐸𝐿𝐸𝑇𝐸𝐷 𝐹𝑅𝑂𝑀 𝑀𝑌 𝑆𝐸𝑅𝑉𝐸𝑅 😏!`
+   
+   """
 
     CLEAN_TXT = """
 **هل تريد بالتأكيد حذف ملفاتك من خادمي 🤔؟**
+**𝘈𝘙𝘌 𝘠𝘖𝘜 𝘚𝘜𝘙𝘌 𝘠𝘖𝘜 𝘞𝘈𝘕𝘛 𝘛𝘖 𝘋𝘌𝘓𝘌𝘛𝘌 𝘠𝘖𝘜𝘙 𝘍𝘐𝘓𝘌𝘚 𝘍𝘙𝘖𝘔 𝘔𝘠 𝘚𝘌𝘙𝘝𝘌𝘙 🤔?**
 
 **ملاحظة:** `لا يمكن التراجع عن هذا الإجراء!`
+**Note:** `This action cannot be undone!`
     """
 
     SELECT_UPLOAD_MODE_TXT = """
 `الرجاء تحديد وضع التحميل من خلال النقر على الأزرار أدناه!`
+`Please select a download mode by clicking on the buttons below!`
 
 **Current Upload mode is(وضع التحميل الحالي هو):** `{}`
 """
