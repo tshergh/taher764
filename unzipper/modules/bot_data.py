@@ -65,10 +65,8 @@ class Messages:
     START_TEXT = """
  🗂مرحبًا {} ، أنا بوت فك ضغط عن ملفات 😇!
 `يمكنني استخراج أرشيفات مثل zip و rar و tar إلخ.`
-
-𝐇𝐈 {}, 𝐈 𝐁𝐎𝐓 𝐃𝐄𝐂𝐎𝐌𝐏𝐑𝐄𝐒𝐒 𝐅𝐈𝐋𝐄𝐒 😇
+𝐇𝐈  {} ،  𝐈 𝐁𝐎𝐓 𝐃𝐄𝐂𝐎𝐌𝐏𝐑𝐄𝐒𝐒 𝐅𝐈𝐋𝐄𝐒 😇
 `𝙸 𝙲𝙰𝙽 𝙴𝚇𝚃𝚁𝙰𝙲𝚃 𝙰𝚁𝙲𝙷𝙸𝚅𝙴𝚂 𝙻𝙸𝙺𝙴 𝚉𝙸𝙿, 𝚁𝙰𝚁, 𝚃𝙰𝚁 𝙴𝚃𝙲.`
-
 **Made with ❤️ by Dev&Eng: @ta_ja199 👨🏻‍💻**
 [⭐️ تقييم البوت (Rate bot)⭐️](https://t.me/tlgrmcbot?start=unzipunrarprobot-review)
     """
@@ -103,7 +101,8 @@ class Messages:
  """
 
     ABOUT_TXT = """
-**حول بوت فك الضغط(About the decompression bot)**
+**حول بوت فك الضغط**
+**About the decompression bot**
 
 ✘ **قناة البوت:** [channal dev taher](https://t.me/engineering_electrical9)
 ✘ **موقع بوت:** [website dev taher](https://electrical-engineer-cc40b.web.app/)
