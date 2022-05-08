@@ -53,7 +53,7 @@ async def clean_ma_files(_, message: Message):
 
 @Client.on_message(filters.incoming & filters.private & filters.regex(https_url_regex) | filters.document)
 async def extract_dis_archive(_, message: Message):
-    unzip_msg = await message.reply("`جارٍ المعالجة ⚙️ ...`", reply_to_message_id=message.message_id)
+    unzip_msg = await message.reply("`جارٍ المعالجة Processing ⚙️ ...`", reply_to_message_id=message.message_id)
     user_id = message.from_user.id
     download_path = f"{Config.DOWNLOAD_LOCATION}/{user_id}"
     if os.path.isdir(download_path):
@@ -63,7 +63,7 @@ async def extract_dis_archive(_, message: Message):
     elif message.document:
         await unzip_msg.edit("**ماذا تريد؟**", reply_markup=Buttons.CHOOSE_E_F__BTNS)
     else:
-        await unzip_msg.edit("`أصمد! ما الذي يجب علي استخراجه 🙄😳؟`")
+        await unzip_msg.edit("`أصمد! ما الذي يجب علي استخراجه 🙄😳؟\n Hold up! What Should I Extract 😳?`")
 
 
 # Database Commands
