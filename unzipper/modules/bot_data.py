@@ -9,18 +9,21 @@ class Buttons:
             [
                 InlineKeyboardButton("مساعدة | help 📜", callback_data="helpcallback"),
                 InlineKeyboardButton("حول | about ⁉️", callback_data="aboutcallback")
-            ]
+            ],
+            [
+                InlineKeyboardButton("ارشفة ملفات | Archive files 📁", url ="https://t.me/zipperfilesbot"),
+            ]        
         ])
     
     CHOOSE_E_F__BTNS = InlineKeyboardMarkup([
             [
-                InlineKeyboardButton("استخراج الملف|extract file 📂", callback_data="extract_file|tg_file|no_pass"),
+                InlineKeyboardButton("استخراج الملف|Extract file 📂", callback_data="extract_file|tg_file|no_pass"),
             ],
             [
-                InlineKeyboardButton("استخراج ملف |extract file password📁", callback_data="extract_file|tg_file|with_pass")
+                InlineKeyboardButton("استخراج ملف |Extract file password 📁", callback_data="extract_file|tg_file|with_pass")
             ],
             [
-                InlineKeyboardButton("إلغاء | cancel ❌", callback_data="cancel_dis")
+                InlineKeyboardButton("إلغاء | Cancel ❌", callback_data="cancel_dis")
             ]
         ])
 
@@ -32,16 +35,16 @@ class Buttons:
                 InlineKeyboardButton("🔗 استخراج عنوان | Url Extract Password 📂", callback_data="extract_file|url|with_pass")
             ],
             [
-                InlineKeyboardButton("إلغاء | cancel ❌", callback_data="cancel_dis")
+                InlineKeyboardButton("إلغاء | Cancel ❌", callback_data="cancel_dis")
             ]
         ])
 
     CLN_BTNS = InlineKeyboardMarkup([
             [
-                InlineKeyboardButton("😇تنظيف ملفاتي | clean files 😇", callback_data="cancel_dis")
+                InlineKeyboardButton("😇تنظيف ملفاتي | Clean files 😇", callback_data="cancel_dis")
             ],
             [
-                InlineKeyboardButton("😒 لا تنظف |no clean 😒", callback_data="nobully")
+                InlineKeyboardButton("😒 لا تنظف |No clean 😒", callback_data="nobully")
             ]
         ])
     
@@ -53,10 +56,10 @@ class Buttons:
 
     SET_UPLOAD_MODE_BUTTONS = InlineKeyboardMarkup([
             [
-                InlineKeyboardButton("كمستند | doc 📄", callback_data="set_mode|doc")
+                InlineKeyboardButton("كمستند | Doc 📄", callback_data="set_mode|doc")
             ],
             [
-                InlineKeyboardButton("كفيديو | video 📹 ", callback_data="set_mode|video")
+                InlineKeyboardButton("كفيديو | Video 📹 ", callback_data="set_mode|video")
             ]
         ])
 
@@ -69,9 +72,7 @@ class Messages:
 𝐇𝐈 𝐈 𝐁𝐎𝐓 𝐃𝐄𝐂𝐎𝐌𝐏𝐑𝐄𝐒𝐒 𝐅𝐈𝐋𝐄𝐒 😇
 `𝙸 𝙲𝙰𝙽 𝙴𝚇𝚃𝚁𝙰𝙲𝚃 𝙰𝚁𝙲𝙷𝙸𝚅𝙴𝚂 𝙻𝙸𝙺𝙴 𝚉𝙸𝙿, 𝚁𝙰𝚁, 𝚃𝙰𝚁 𝙴𝚃𝙲.`
 
-**Dev&Eng: @ta_ja199 👨🏻‍💻**
-[⭐️ تقييم البوت |Rate bot⭐️](https://t.me/tlgrmcbot?start=unzipunrarprobot-review)
-    """
+**Dev&Eng: @ta_ja199 👨🏻‍💻**"""
 
     HELP_TXT = """
 **كيف تستخرج؟ 🤔**
@@ -115,15 +116,10 @@ class Messages:
 **👤 Developer(المطور)**
 ✘ **Name(أسم ):** Taher Alnoori (طاهر النوري)
 ✘ **Username(معرف):** @ta_ja199 
-✘ **Instagram(انستا)🎛:**[Click here | إضغط  هنا] (https://www.instagram.com/ta_9_ja/)
-✘ **Website(موقع)🌐:**[Click here | إضغط  هنا](https://electrical-engineer-cc40b.web.app)
+✘**Channal(قناة البوت)**:@engineering_electrical9
+✘**Bot pdf tools(بوت ادوات pdf): @i2pdfbot
 
-✘ **⭐️ تقييم البوت ⭐️:** [⭐️Rate⭐️](https://t.me/tlgrmcbot?start=unzipunrarprobot-review)
-✘ **قناة البوت:** [channal dev taher](https://t.me/engineering_electrical9)
-✘ **موقع بوت:** [website dev taher](https://electrical-engineer-cc40b.web.app/)
-✘ **استفسار ودعم:** [dev Taher](https://t.me/ta_ja199)
-
-✘ **⭐️تعديل على pdf ⭐️:** [⭐️pdf tools⭐️](https://t.me/i2pdfbot)
+[⭐️Rate : تقيييم البوت⭐️](https://t.me/tlgrmcbot?start=unzipunrarprobot-review)
 
 **Made with ❤️ by Dev&Eng:- @ta_ja199**
     """
