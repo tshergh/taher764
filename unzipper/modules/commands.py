@@ -57,7 +57,7 @@ async def extract_dis_archive(_, message: Message):
     user_id = message.from_user.id
     download_path = f"{Config.DOWNLOAD_LOCATION}/{user_id}"
     if os.path.isdir(download_path):
-        return await unzip_msg.edit("`هناك بالفعل عملية واحدة جارية ، لا ترسل بريدًا عشوائيًا أيها الأحمق 😑🌝!` \n\nهل تريد مسح الملفات من الخادم الخاص بي؟ ثم أرسل فقط **/clean** أمر!")
+        return await unzip_msg.edit("`هناك بالفعل عملية واحدة جارية ، لا ترسل بريدًا عشوائيًا أيها الأحمق 😑🌝!` \n\nهل تريد مسح الملفات من الخادم الخاص بي؟ ثم أرسل فقط **/clean** أمر!\n\nAlready one process is going on, Don't spam you idiot 😑!` \n\nWanna Clear You Files from my server? Then just send **/clean** command! ")
     if message.text and (re.match(https_url_regex, message.text)):
         await unzip_msg.edit("**ماذا تريد؟**", reply_markup=Buttons.CHOOSE_E_U__BTNS)
     elif message.document:
