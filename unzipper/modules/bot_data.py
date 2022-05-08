@@ -32,13 +32,13 @@ class Buttons:
                 InlineKeyboardButton("🔗 (كلمة المرور) استخراج عنوان URL 📂", callback_data="extract_file|url|with_pass")
             ],
             [
-                InlineKeyboardButton("إلغاء (cancel)❌", callback_data="cancel_dis")
+                InlineKeyboardButton("إلغاء |cancel ❌", callback_data="cancel_dis")
             ]
         ])
 
     CLN_BTNS = InlineKeyboardMarkup([
             [
-                InlineKeyboardButton("تنظيف ملفاتي (clean files)😇", callback_data="cancel_dis")
+                InlineKeyboardButton("تنظيف ملفاتي | clean files 😇", callback_data="cancel_dis")
             ],
             [
                 InlineKeyboardButton("لا تنظف no clean", callback_data="nobully")
@@ -47,16 +47,16 @@ class Buttons:
     
     ME_GOIN_HOME = InlineKeyboardMarkup([
             [
-                InlineKeyboardButton("رجوع (Back)🏡", callback_data="megoinhome")
+                InlineKeyboardButton("رجوع | Back 🏡", callback_data="megoinhome")
             ]
         ])
 
     SET_UPLOAD_MODE_BUTTONS = InlineKeyboardMarkup([
             [
-                InlineKeyboardButton("كمستند (doc) 📄", callback_data="set_mode|doc")
+                InlineKeyboardButton("كمستند | doc 📄", callback_data="set_mode|doc")
             ],
             [
-                InlineKeyboardButton("كفيديو (video) 📹 ", callback_data="set_mode|video")
+                InlineKeyboardButton("كفيديو | video 📹 ", callback_data="set_mode|video")
             ]
         ])
 
@@ -118,11 +118,13 @@ class Messages:
 ✘ **Instagram(انستا)🎛:**[Click here | إضغط  هنا] (https://www.instagram.com/ta_9_ja/)
 ✘ **Website(موقع)🌐:**[Click here | إضغط  هنا](https://electrical-engineer-cc40b.web.app)
 
-
 ✘ **⭐️ تقييم البوت ⭐️:** [⭐️Rate⭐️](https://t.me/tlgrmcbot?start=unzipunrarprobot-review)
 ✘ **قناة البوت:** [channal dev taher](https://t.me/engineering_electrical9)
 ✘ **موقع بوت:** [website dev taher](https://electrical-engineer-cc40b.web.app/)
 ✘ **استفسار ودعم:** [dev Taher](https://t.me/ta_ja199)
+
+✘ **⭐️تعديل على pdf ⭐️:** [⭐️pdf tools⭐️](https://t.me/i2pdfbot)
+
 **Made with ❤️ by Dev&Eng:- @ta_ja199**
     """
 
