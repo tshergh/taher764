@@ -50,10 +50,10 @@ async def make_keyboard(paths, user_id, chat_id):
     i_kbd = InlineKeyboard(row_width=1)
     data = []
     data.append(
-        InlineKeyboardButton(f"تحميل الكل (Upload All)♻️", f"ext_a|{user_id}|{chat_id}")
+        InlineKeyboardButton(f"تحميل الكل | Upload All ♻️", f"ext_a|{user_id}|{chat_id}")
     )
     data.append(
-        InlineKeyboardButton("إلغاء (Cancel)❌", "cancel_dis")
+        InlineKeyboardButton("إلغاء | Cancel ❌", "cancel_dis")
     )
     for file in paths:
         data.append(
