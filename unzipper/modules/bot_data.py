@@ -20,28 +20,28 @@ class Buttons:
                 InlineKeyboardButton("استخراج ملف |extract file password📁", callback_data="extract_file|tg_file|with_pass")
             ],
             [
-                InlineKeyboardButton("إلغاء (cancel)❌", callback_data="cancel_dis")
+                InlineKeyboardButton("إلغاء | cancel ❌", callback_data="cancel_dis")
             ]
         ])
 
     CHOOSE_E_U__BTNS = InlineKeyboardMarkup([
             [
-                InlineKeyboardButton("🔗 استخراج عنوان URL 📂", callback_data="extract_file|url|no_pass"),
+                InlineKeyboardButton("🔗 استخراج عنوان | Url Extract 📂", callback_data="extract_file|url|no_pass"),
             ],
             [
-                InlineKeyboardButton("🔗 (كلمة المرور) استخراج عنوان URL 📂", callback_data="extract_file|url|with_pass")
+                InlineKeyboardButton("🔗 استخراج عنوان | Url Extract Password 📂", callback_data="extract_file|url|with_pass")
             ],
             [
-                InlineKeyboardButton("إلغاء |cancel ❌", callback_data="cancel_dis")
+                InlineKeyboardButton("إلغاء | cancel ❌", callback_data="cancel_dis")
             ]
         ])
 
     CLN_BTNS = InlineKeyboardMarkup([
             [
-                InlineKeyboardButton("تنظيف ملفاتي | clean files 😇", callback_data="cancel_dis")
+                InlineKeyboardButton("😇تنظيف ملفاتي | clean files 😇", callback_data="cancel_dis")
             ],
             [
-                InlineKeyboardButton("لا تنظف no clean", callback_data="nobully")
+                InlineKeyboardButton("😒 لا تنظف |no clean 😒", callback_data="nobully")
             ]
         ])
     
